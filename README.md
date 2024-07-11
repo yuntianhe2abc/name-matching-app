@@ -20,7 +20,6 @@ This project provides an AWS Lambda function written in TypeScript to match a hu
 
 - Name matching using OpenAI's GPT-3.5-turbo.
 - Few shot training for naming matching task.
-- Post validation of the model response.
 - Carefully designed prompt.
 - Error handling and retries for OpenAI API calls.
-- Validation of OpenAI responses against the provided list of names.
+- Post Validation of OpenAI responses against the provided list of names.
