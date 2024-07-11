@@ -2,8 +2,6 @@ import { Stack, StackProps } from "aws-cdk-lib";
 import { LambdaIntegration, RestApi } from "aws-cdk-lib/aws-apigateway";
 import { Construct } from "constructs";
 
-//ApiStack.NameMatchingApiEndpointD028624F = https://5mtd8ee5li.execute-api.ap-southeast-2.amazonaws.com/prod/
-
 interface ApiStackProps extends StackProps {
   readonly helloLambdaIntegration: LambdaIntegration;
   readonly nameMatchingLambdaIntegration: LambdaIntegration;
