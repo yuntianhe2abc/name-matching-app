@@ -40,5 +40,10 @@ This project provides an AWS Lambda function written in TypeScript to match a hu
 ### Example queries:
 
 I want a chinese girl.
+![Chinese Girl](screenshots/openQueryChineseGirl.png)
+
 I want a female name.
+![Female name](screenshots/openQueryFemale.png)
+
 I want a peoson whose first name is Pierce
+![First name](screenshots/openQueryFirseName.png)
