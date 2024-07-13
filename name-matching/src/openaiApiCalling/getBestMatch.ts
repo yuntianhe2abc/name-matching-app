@@ -1,4 +1,5 @@
 import { OpenAI } from "openai";
+import { nameList } from "../data/mockData";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -22,10 +23,7 @@ const trainingExamples: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
 ];
 
 // Function to process OpenAI response
-const getBestMatch = async (
-  name: string,
-  nameList: string[]
-): Promise<string> => {
+const getBestMatch = async (queriedName: string): Promise<string> => {
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
     messages: [
@@ -37,7 +35,7 @@ const getBestMatch = async (
       ...trainingExamples,
       {
         role: "user",
-        content: `Find the best match for the input name "${name}" from the collection of people: ${nameList.join()},response with the actual person only without other content.`,
+        content: `Find the best match for the input name "${queriedName}" from the collection of people: ${nameList.join()},response with the actual person only without other content.`,
       },
     ],
     //reduce creativity in generations

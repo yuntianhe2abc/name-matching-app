@@ -1,11 +1,22 @@
 # ApiEndpoint
 
-https://5mtd8ee5li.execute-api.ap-southeast-2.amazonaws.com/prod/nameMatching
+## Name Match
 
-## Postman test
+https://5mtd8ee5li.execute-api.ap-southeast-2.amazonaws.com/prod/exactMatch
+
+### Postman test
 
 Method: POST
 body: {person: "华文吴"}
+
+### Open query on Names
+
+https://zy7czhqpx9.execute-api.ap-southeast-2.amazonaws.com/prod/openMatch
+
+### Postman test
+
+Method: POST
+body: {"query": "I am looking for a chinese girl."}
 
 ## Name Matching Lambda Function
 
@@ -23,3 +34,11 @@ This project provides an AWS Lambda function written in TypeScript to match a hu
 - Carefully designed prompt.
 - Error handling and retries for OpenAI API calls.
 - Post Validation of OpenAI responses against the provided list of names.
+
+# OpenQuery - Handle any question on people collection
+
+### Example queries:
+
+I want a chinese girl.
+I want a female name.
+I want a peoson whose first name is Pierce

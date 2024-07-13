@@ -8,4 +8,5 @@ new ApiStack(app, "ApiStack", {
   //define an API Gateway methods:
   helloLambdaIntegration: lambdaStack.helloLambdaIntegration,
   nameMatchingLambdaIntegration: lambdaStack.nameMatchingLambdaIntegration,
+  openNameMatchLambdaIntegration: lambdaStack.openNameMatchLambdaIntegration,
 });

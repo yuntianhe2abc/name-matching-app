@@ -1,5 +1,4 @@
 import {
-  APIGatewayProxyHandler,
   APIGatewayProxyEvent,
   Context,
   APIGatewayProxyResult,
@@ -7,10 +6,9 @@ import {
 
 async function handler(event: APIGatewayProxyEvent, context: Context) {
   console.log(event);
-  const abc = "adsdd";
   const response: APIGatewayProxyResult = {
     statusCode: 200,
-    body: JSON.stringify(abc),
+    body: JSON.stringify("Hello from Hello Lambda function"),
   };
   return response;
 }
